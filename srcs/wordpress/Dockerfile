@@ -1,4 +1,3 @@
-
 FROM debian:bookworm
 
 # empeche apt de poser des questions
@@ -20,16 +19,16 @@ COPY www.conf /etc/php/8.2/fpm/pool.d/
 WORKDIR /var/www/html/
 
 
-COPY script.sh .
+COPY script.sh /usr/local/bin/script.sh
 
 
-RUN chmod +x script.sh
+RUN chmod +x /usr/local/bin/script.sh
 
 
 EXPOSE 9000
 
 
-ENTRYPOINT ["/var/www/html/script.sh"]
+ENTRYPOINT ["/usr/local/bin/script.sh"]
 
 
 CMD ["php-fpm8.2", "-F"]
