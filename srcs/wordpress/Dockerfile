@@ -1,6 +1,5 @@
 FROM debian:bookworm
 
-# empeche apt de poser des questions
 ENV DEBIAN_FRONTEND=noninteractive
 
 

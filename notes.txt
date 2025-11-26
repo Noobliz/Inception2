@@ -1,0 +1,3 @@
+docker exec -it mariadb mysql -u user -p
+SELECT * FROM wordpress;
+SELECT * FROM wp_comments;
